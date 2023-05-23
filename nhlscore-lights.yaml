@@ -5,11 +5,11 @@ blueprint:
     This blueprint will flash one or more lights using the team colors provided by the api, triggered by any score change (optionally ignoring opponent scores).
     
     
-    Requires the [ha-nfl integration by @zacs](https://github.com/zacs/ha-nfl).
+    Requires the [hass-nhlapi integration by @JayBlackedOut](https://github.com/JayBlackedOut/hass-nhlapi).
   input:
     teams:
       name: NHL Teams
-      description: NFL teams whose games you want to watch for score changes.
+      description: NHL teams whose games you want to watch for score changes.
       selector:
         entity:
           integration: nhl_api
