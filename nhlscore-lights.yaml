@@ -69,7 +69,7 @@ action:
       sequence:
         - service: light.turn_on
           data:
-            rgb_color: "{{ state_attr(trigger.entity_id, 'nhl_yourteam_colors')[0] if (trigger.id != 'away_score') else  states('nhl_yourteam_colors')[0] }}"
+            rgb_color: "{{ states('nhl_yourteam_colors')[0] if (trigger.id != 'away_score') else  states('nhl_yourteam_colors')[0] }}"
           target:
             entity_id: !input light_targets
         - delay:
@@ -79,7 +79,7 @@ action:
             milliseconds: 0
         - service: light.turn_on
           data:
-            rgb_color: "{{ state_attr(trigger.entity_id, 'nhl_yourteam_colors')[1] if (trigger.id != 'home_score') else  states('nhl_yourteam_colors')[1] }}"
+            rgb_color: "{{ states('nhl_yourteam_colors')[1] if (trigger.id != 'home_score') else  states('nhl_yourteam_colors')[1] }}"
           target:
             entity_id: !input light_targets
         - delay:
