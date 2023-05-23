@@ -22,8 +22,8 @@ blueprint:
         entity:
           domain: light
           multiple: true
-    activate_on_opponent_score:
-      name: Activate on opponent score
+    activate_on_away_score:
+      name: Activate on away score
       description: >-
         Enable to flash lights on any score change, disable to only activate when your team's score changes.  Colors will be those of whichever team has scored.
       selector:
@@ -44,7 +44,7 @@ blueprint:
           mode: slider
       default: 3
 variables:
-  activate_on_opponent_score: !input activate_on_away_score
+  activate_on_away_score: !input activate_on_away_score
 trigger:
   - platform: state
     entity_id: !input teams
