@@ -12,7 +12,7 @@ blueprint:
       description: NFL teams whose games you want to watch for score changes.
       selector:
         entity:
-          integration: nhl-api
+          integration: nhl_api
           multiple: true
     light_targets:
       name: Lights to flash
